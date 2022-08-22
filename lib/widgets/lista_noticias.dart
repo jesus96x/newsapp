@@ -55,7 +55,7 @@ class _Noticia extends StatelessWidget {
         ),
         Container(
           padding: EdgeInsets.symmetric(horizontal: 20),
-          child: Text(article.description == null ? "" : article.description),
+          child: Text(article.description ?? ""),
         ),
         SizedBox(height: 10,),
         Divider(),

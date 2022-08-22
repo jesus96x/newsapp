@@ -33,7 +33,7 @@ class Article {
     required this.source,
     this.author,
     required this.title,
-    required this.description,
+    this.description,
     required this.url,
     this.urlToImage,
     required this.publishedAt,
@@ -43,7 +43,7 @@ class Article {
   Source source;
   String? author;
   String title;
-  String description;
+  String? description;
   String url;
   String? urlToImage;
   DateTime publishedAt;
@@ -68,7 +68,7 @@ class Article {
     "source": source.toMap(),
     "author": author ?? null,
     "title": title,
-    "description": description == null ? null : description,
+    "description": description,
     "url": url,
     "urlToImage": urlToImage ?? null,
     "publishedAt": publishedAt.toIso8601String(),
